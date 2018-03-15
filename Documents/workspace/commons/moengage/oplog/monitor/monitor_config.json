@@ -1,0 +1,10 @@
+{
+    "basePath": "/var/log/{process_name}-pipeline/",
+    "folders": [],
+    "supervisor": {
+        "configFile": "supervisor-mongo-connector-{process_name}.conf",
+        "logFile": "supervisor-mongo-connector-{process_name}.log",
+        "pidFile": "supervisor-mongo-connector-{process_name}.pid",
+        "programName": "pipeline-monitor"
+    }
+}

@@ -1,0 +1,129 @@
+{
+    "logging": {
+        "log_level": "DEBUG"
+    },
+    "connections": {
+        "cache": {
+            "fc": {
+                "host": "localhost",
+                "port": 6379,
+                "lazy": false,
+                "timeout": 5,
+                "db": 0
+            },
+            "fc_v2": {
+                "host": "localhost",
+                "port": 6379,
+                "lazy": false,
+                "timeout": 5,
+                "db": 0
+            },
+            "st_fc": {
+                "host": "localhost",
+                "port": 6379,
+                "lazy": true,
+                "timeout": 5,
+                "db": 0
+            },
+            "st_dedup": {
+                "host": "st-dedup.wvesfv.0001.use1.cache.amazonaws.com",
+                "port": 6379,
+                "lazy": false,
+                "timeout": 5,
+                "db": 0
+            },
+            "local": {
+                "host": "127.0.0.1",
+                "port": 6379,
+                "lazy": true,
+                "timeout": 5,
+                "db": 0
+            },
+            "productfeed": {
+                "host": "product-enrichment.wvesfv.0001.use1.cache.amazonaws.com",
+                "port": 6379,
+                "lazy": true,
+                "timeout": 5,
+                "db": 0
+            },
+            "prod": {
+                "host": "localhost",
+                "port": 6379,
+                "db": 0,
+                "timeout": 5,
+                "lazy": true,
+                "replica": [
+                    {
+                        "name": "prod_1",
+                        "host": "localhost",
+                        "port": 6379,
+                        "db": 0,
+                        "timout": 5,
+                        "lazy": true
+                    }
+                ]
+            },
+            "push_campaign": {
+                "host": "localhost",
+                "port": 6379,
+                "db": 0,
+                "timeout": 15,
+                "lazy": true
+            },
+            "smart_trigger": {
+                "host": "localhost",
+                "port": 6379,
+                "db": 0,
+                "timeout": 5,
+                "lazy": true
+            },
+            "bfilter": {
+                "host": "localhost",
+                "port": 6379,
+                "db": 1,
+                "timeout": 5,
+                "lazy": true
+            },
+            "bfilterlocal": {
+                "host": "localhost",
+                "port": 6379,
+                "timeout": 5,
+                "db": 0,
+                "lazy": true
+            },
+            "allUsersCache_v2": {
+                "host": "localhost",
+                "port": 6379,
+                "db": 0,
+                "timeout": 5,
+                "lazy": true
+            }
+        },
+        "mongo": {
+            "default": {
+                "host": [
+                    "localhost"
+                ],
+                "port": 27017
+            },
+            "staging": {
+                "host": [
+                    "localhost"
+                ],
+                "port": 27017
+            },
+            "snapdeal": {
+                "host": [
+                    "localhost"
+                ],
+                "port": 27017
+            },
+            "segmentation": {
+                "host": [
+                    "localhost"
+                ],
+                "port": 27017
+            }
+        }
+    }
+}

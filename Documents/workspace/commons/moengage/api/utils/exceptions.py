@@ -1,0 +1,2 @@
+class HealthCheckRouteException(Exception):
+    pass

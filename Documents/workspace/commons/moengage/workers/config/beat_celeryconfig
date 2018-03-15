@@ -1,0 +1,10 @@
+CELERY_BIN="/usr/local/bin/celery"
+
+CELERYBEAT_LOG_FILE="{worker_logs_dir}/{worker_name}.log"
+CELERYBEAT_PID_FILE="{worker_logs_dir}/{worker_name}.pid"
+
+CELERYD_CHDIR={worker_logs_dir}
+CELERYD_USER="ubuntu"
+
+CELERY_CREATE_DIRS=1
+CELERYD_TASK_TIME_LIMIT=60

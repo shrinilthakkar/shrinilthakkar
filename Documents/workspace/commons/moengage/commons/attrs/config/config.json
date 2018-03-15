@@ -1,0 +1,544 @@
+{
+  "actions": {
+    "MOE_EMAIL_MESSAGE_EVENT": {
+      "categories": ["Campaign Activity"],
+      "hidden": true
+    },
+    "Users Who Converted": {
+      "categories": ["Campaign Activity"],
+      "readable_name": "Conversion",
+      "description": "Tracked when our system finds a user has done a conversion event for a campaign"
+    },
+    "MOE_APP_OPENED": {
+      "categories": ["Lifecycle"],
+      "readable_name": "App/Site Opened",
+      "description": "Tracked when a user session begins on the app or website."
+    },
+    "Device Uninstall": {
+      "categories": ["Uninstall"],
+      "description": "Tracked when a user uninstalls the app on a device."
+    },
+    "Device Reinstall": {
+      "categories": ["Uninstall"],
+      "description": "Tracked when a user reinstalls the app on a device."
+    },
+    "User Reinstall": {
+      "categories": ["Uninstall"],
+      "description": "Tracked when a user reinstalls the app on a device."
+    },
+    "NOTIFICATION_RECEIVED_MOE": {
+      "categories": ["Campaign Activity"],
+      "readable_name": "Notification Received Android",
+      "description": "Tracked when a user receives notification on Android device."
+    },
+    "NOTIFICATION_RECEIVED_WEB_MOE": {
+      "categories": ["Campaign Activity"],
+      "readable_name": "Notification Received Web",
+      "description": "Tracked when a user receives notification on the browser."
+    },
+    "NOTIFICATION_CLICKED_MOE": {
+      "categories": ["Campaign Activity"],
+      "readable_name": "Notification Clicked Android",
+      "description": "Tracked when a user clicks notification on Android device."
+    },
+    "NOTIFICATION_CLEARED_MOE": {
+      "categories": ["Campaign Activity"],
+      "readable_name": "Notification Swiped Android",
+      "description": "Tracked when a notification is dismissed by the user with a swipe gesture on Android"
+    },
+    "NOTIFICATION_CLICKED_WINDOWS_MOE": {
+      "categories": ["Campaign Activity"],
+      "readable_name": "Notification Clicked Windows",
+      "description": "Tracked when a user clicks notification on Windows device."
+    },
+    "NOTIFICATION_CLICKED_WEB_MOE": {
+      "categories": ["Campaign Activity"],
+      "readable_name": "Notification Clicked Web",
+      "description": "Tracked when a user clicks notification on browser."
+    },
+    "NOTIFICATION_CLICKED_IOS_MOE": {
+      "categories": ["Campaign Activity"],
+      "readable_name": "Notification Clicked iOS",
+      "description": "Tracked when a user clicks notification on iOS device."
+    },
+    "MOE_EMAIL_OPEN": {
+      "categories": ["Campaign Activity"],
+      "readable_name": "Email Opened",
+      "description": "Tracked when a user opens an email."
+    },
+    "MOE_EMAIL_CLICK": {
+      "categories": ["Campaign Activity"],
+      "readable_name": "Email Clicked",
+      "description": "Tracked when a user clicks on any link in the email."
+    },
+    "MOE_EMAIL_SENT": {
+      "categories": ["Campaign Activity"],
+      "readable_name": "Email Sent",
+      "description": "Tracked when our system sends email to a user."
+    },
+    "MOE_EMAIL_HARD_BOUNCE": {
+      "categories": ["Campaign Activity"],
+      "readable_name": "Email Bounced",
+      "description": "Tracked when our system finds an email is hard bounced. Typically happens when email adderss doesn't exist."
+    },
+    "MOE_EMAIL_SOFT_BOUNCE": {
+      "categories": ["Campaign Activity"],
+      "readable_name": "Email Soft Bounced",
+      "description": "Tracked when our system finds an email is soft bounced. Typically happens when there is temporary delivery issue."
+    },
+    "MOE_EMAIL_UNSUBSCRIBE": {
+      "categories": ["Campaign Activity"],
+      "readable_name": "Email Unsubscribed",
+      "description": "Tracked when a user unsubcribes from receiving emails."
+    },
+    "MOE_EMAIL_DROP": {
+      "categories": ["Campaign Activity"],
+      "readable_name": "Email Dropped",
+      "description": "Tracked when a email is dropped. Email is dropped, when it's part of he bounce list, the unsubscribe list, or the spam report list"
+    },
+    "MOE_EMAIL_SPAM": {
+      "categories": ["Campaign Activity"],
+      "readable_name": "Email Spam Complained",
+      "description": "Tracked when a user marks the email as spam."
+    },
+    "IN_APP_SHOWN": {
+      "categories": ["Campaign Activity"],
+      "readable_name": "In-App Shown Android",
+      "description": "Tracked when a In-App message is shown to the user on Android device."
+    },
+    "IN_APP_CLICKED": {
+      "categories": ["Campaign Activity"],
+      "readable_name": "In-App Clicked Android",
+      "description": "Tracked when a user clicks In-App message on Android device."
+    },
+    "IN_APP_CLOSE_CLICKED": {
+      "categories": ["Campaign Activity"],
+      "readable_name": "In-App Closed Android",
+      "description": "Tracked when a user dismisses In-App message by clicking on close button on Android device."
+    },
+    "IN_APP_AUTO_DISMISS": {
+      "categories": ["Campaign Activity"],
+      "hidden": true
+    },
+    "iOS_IN_APP_AUTO_DISMISS": {
+      "categories": ["Campaign Activity"],
+      "hidden": true
+    },
+    "WINDOWS_IN_APP_AUTO_DISMISS": {
+      "categories": ["Campaign Activity"],
+      "hidden": true
+    },
+    "WINDOWS_IN_APP_CLICKED": {
+      "categories": ["Campaign Activity"],
+      "readable_name": "In-App Clicked Windows",
+      "description": "Tracked when a user clicks In-App message on Windows device."
+    },
+    "WINDOWS_IN_APP_CLOSE_CLICKED": {
+      "categories": ["Campaign Activity"],
+      "readable_name": "In-App Closed Windows",
+      "description": "Tracked when a user dismisses In-App message by clicking on close button on Windows device."
+    },
+    "WINDOWS_IN_APP_SHOWN": {
+      "categories": ["Campaign Activity"],
+      "readable_name": "In-App Shown Windows",
+      "description": "Tracked when a In-App message is shown to the user on Windows device."
+    },
+    "iOS_IN_APP_SHOWN": {
+      "categories": ["Campaign Activity"],
+      "readable_name": "In-App Shown iOS",
+      "description": "Tracked when a In-App message is shown to the user on iOS device."
+    },
+    "iOS_IN_APP_CLICKED": {
+      "categories": ["Campaign Activity"],
+      "readable_name": "In-App Clicked iOS",
+      "description": "Tracked when a user clicks In-App message on iOS device."
+    },
+    "iOS_IN_APP_CLOSE_CLICKED": {
+      "categories": ["Campaign Activity"],
+      "readable_name": "In-App Closed iOS",
+      "description": "Tracked when a user dismisses In-App message by clicking on close button on iOS device."
+    },
+    "WEBHOOK_SENT": {
+      "categories": ["Campaign Activity"],
+      "readable_name": "Connector Sent",
+      "description": "Tracked when a connector was sent successfully."
+    },
+    "SMS_DELIVERED": {
+      "categories": ["Campaign Activity"],
+      "readable_name": "SMS Delivered",
+      "description": "Tracked when our system receives delivery receipt for the SMS sent to a user"
+    },
+    "SMS_SENT": {
+      "categories": ["Campaign Activity"],
+      "readable_name": "SMS Sent",
+      "description": "Tracked when our system sends SMS to a user"
+    },
+    "n_w_s": {
+      "categories": ["Campaign Activity"],
+      "readable_name": "Notification Sent Windows",
+      "description": "Tracked when a notification is sent to the user on Windows, doesn't indicate if the notification is received."
+    },
+    "n_i_s": {
+      "categories": ["Campaign Activity"],
+      "readable_name": "Notification Sent iOS",
+      "description": "Tracked when a notification is sent to the user on iOS, doesn't indicate if the notification is received."
+    },
+    "MOE_PAGE_VIEWED": {
+      "categories": ["Lifecycle"],
+      "readable_name": "Viewed Web Page",
+      "description": "Tracked when a user visits a web page. Select page URL as event attribute to find number of users visiting a particular page or use it to setup a \"Drop-off capture\" Smart Trigger Web Push."
+    },
+    "MOE_WEB_OPTIN_BANNER_LOAD": {
+      "categories": ["Reachability"],
+      "readable_name": "Viewed Web Push Soft-ask",
+      "description": "Tracked when a user views the Push Permission Soft-ask on your website as part of the 2-step Push Opt-in mechanism"
+    },
+    "MOE_WEB_OPTIN_ACCEPTED": {
+      "categories": ["Reachability"],
+      "readable_name": "Accepted Web Push Soft-ask",
+      "description": "Tracked when a user accepts the Push Permission Soft-ask on your website as part of the 2-step Push Opt-in mechanism"
+    },
+    "MOE_WEB_OPTIN_CLOSED": {
+      "categories": ["Reachability"],
+      "readable_name": "Closed Web Push Soft-ask",
+      "description": "Tracked when a user closes the Push Permission Soft-ask on your website as part of the 2-step Push Opt-in mechanism"
+    },
+    "MOE_OPT_IN_ALLOWED": {
+      "categories": ["Reachability"],
+      "readable_name": "Allowed Web Push Subscription",
+      "description": "Tracked when a user allows to receive push notifications on Web"
+    },
+    "MOE_OPT_IN_BLOCKED": {
+      "categories": ["Reachability"],
+      "readable_name": "Denied Web Push Subscription",
+      "description": "Tracked when a user denies to receive push notifications on Web"
+    },
+    "MOE_OPT_IN_DISMISSED": {
+      "categories": ["Reachability"],
+      "readable_name": "Dismissed Web Push Subscription",
+      "description": "Tracked when a user dismisses the push subscription prompt"
+    },
+    "MOE_OPT_IN_SHOWN": {
+      "categories": ["Reachability"],
+      "readable_name": "Displayed Web Push Subscription",
+      "description": "Tracked when a push subscription prompt is shown to the user"
+    },
+    "Web Push Opt-in Denied": {
+      "categories": ["Reachability"],
+      "readable_name": "Denied Web Push Hard-ask",
+      "description": "Tracked when a user denies the Push Permission Hard-ask on your website",
+      "hidden": true
+    },
+    "MOE_HTTP_OVERLAY_SHOWN": {
+      "categories": ["Reachability"],
+      "readable_name": "Overlay shown in 1-click HTTP subscription",
+      "description": "Tracked when a user views a Subscription Message on your website as part of the HTTP Push Subscription flow"
+    },
+    "MOE_HTTP_OVERLAY_CLICKED": {
+      "categories": ["Reachability"],
+      "readable_name": "Overlay clicked in 1-click HTTP subscription",
+      "description": "Tracked when a user clicks a Subscription Message on your website as part of the HTTP Push Subscription flow "
+    },
+    "MOE_USER_SUBSCRIBED": {
+      "categories": ["Reachability"],
+      "readable_name": "Subscribed to Web Push",
+      "description": "Tracked when a user is subscribed to Web Push Notifications. Use it to find day-wise count of subscribers or setup a \"Welcome\" Smart Trigger Web Push."
+    },
+    "MOE_WEB_UNSUBSCRIBED": {
+      "categories": ["Reachability"],
+      "readable_name": "Unsubscribed from Web Push",
+      "description": "Tracked when a user directly unsubscribes from the website / chrome settings or GCM communicates that a push token is invalid."
+    },
+    "MOE_NO_PAYLOAD_WEB": {
+      "hidden": true,
+      "description": "When the push payload is missing for a user who got the intimation from GCM"
+    },
+    "MOE_SUBSCRIPTION_UNSUCCESSFUL": {
+      "hidden": true,
+      "description": "When we are not able get the push token in HTTP Subscription"
+    },
+    "MOE_SUBSCRIPTION_TIMEOUT": {
+      "hidden": true,
+      "description": "When we are not able get the push token in HTTP Subscription"
+    },
+    "EVENT_ACTION_WEB_SESSION_START": {
+      "hidden": true,
+      "description": "This event is used to derive App Opened, First Seen, Last Seen, No. of Sessions etc."
+    },
+    "INSTALL": {
+      "categories": ["Acquisition"],
+      "description": "Tracked when a user installs the app on the device."
+    },
+    "MOE_APP_RATED":{
+      "categories": ["Campaign Activity"],
+      "readable_name": "InApp Rating Done",
+      "description": "Tracked when a user submits a rating in InApp"
+    }
+  },
+  "action_attributes": {
+    "appVersion": {
+      "readable_name": "App Version",
+      "dsecription": "App version on which this event was tracked."
+    },
+    "sdkVersion": {
+      "readable_name": "SDK Version",
+      "description": "MoEngage SDK version on which this event was tracked."
+    },
+    "os": {
+      "readable_name": "Platform",
+      "description": "OS on which this event was tracked."
+    },
+    "cid": {
+      "readable_name": "Campaign Id",
+      "description": "Id of the campaign associated with this event."
+    },
+    "gcm_campaign_id": {
+      "readable_name": "Campaign Id",
+      "description": "Id of the campaign associated with this event."
+    },
+    "wns_campaign_id": {
+      "readable_name": "Campaign Id",
+      "description": "Id of the campaign associated with this event."
+    }
+  },
+  "user_attributes": {
+    "publisher_name": {
+      "readable_name": "Publisher Name",
+      "categories": ["Acquisition"],
+      "description": "Name of the Publisher through which the user installed the app."
+    },
+    "campaign_name": {
+      "readable_name": "Campaign Name",
+      "categories": ["Acquisition"],
+      "description": "Name of the campaign advertisement through which the user installed the app."
+    },
+    "t_rev": {
+      "readable_name": "LTV",
+      "categories": ["Lifecycle"],
+      "description": "Life time value of the user"
+    },
+    "t_trans": {
+      "readable_name": "No. of Conversions",
+      "categories": ["Lifecycle"],
+      "description": "No. of conversion events done by the user, Conversion Goal can be modified in settings page."
+    },
+    "moe_ip_city": {
+      "readable_name": "Last Known City",
+      "categories": ["Localization"],
+      "description": "This attribute is based on user’s last known probable location"
+    },
+    "moe_ip_pin": {
+      "readable_name": "Last Known Pincode",
+      "categories": ["Localization"],
+      "description": "This attribute is based on user’s last known probable location"
+    },
+    "moe_ip_subdivision": {
+      "readable_name": "Last Known State",
+      "categories": ["Localization"],
+      "description": "This attribute is based on user’s last known probable location"
+    },
+    "moe_ip_country": {
+      "readable_name": "Last Known Country",
+      "categories": ["Localization"],
+      "description": "This attribute is based on user’s last known probable location"
+    },
+    "moe_dtzo": {
+      "readable_name": "User Time Zone Offset (Mins)",
+      "categories": ["Localization"],
+      "hidden": true
+    },
+    "u_s_c": {
+      "readable_name": "No. of Sessions",
+      "categories": ["Lifecycle"],
+      "description": "No.of sessions done by the user"
+    },
+    "status": {
+      "readable_name": "Uninstall Status",
+      "categories": ["Uninstall"],
+      "description": "Current status of the user, If the user has the app installed on his device."
+    },
+    "u_l_a": {
+      "readable_name": "Last Seen",
+      "categories": ["Lifecycle"],
+      "description": "Last seen time of the user"
+    },
+    "cr_t": {
+      "readable_name": "First Seen",
+      "categories": ["Lifecycle"],
+      "description": "First seen time of the user"
+    },
+    "u_mb": {
+      "readable_name": "Mobile Number",
+      "description": "Mobile Number of the user."
+    },
+    "uid": {
+      "readable_name": "ID",
+      "description": "Unique Id that the app has set for a user."
+    },
+    "u_bd": {
+      "readable_name": "Birthday",
+      "description": "Birth date of the user."
+    },
+    "u_em": {
+      "readable_name": "Email",
+      "description": "Email address of the user."
+    },
+    "LOCALE_LANGUAGE": {
+      "hidden": true
+    },
+    "LOCALE_COUNTRY_ISO3": {
+      "hidden": true
+    },
+    "LOCALE_COUNTRY_DISPLAY": {
+      "readable_name": "Locale Country",
+      "description": "Country of the user derived from device locale settings. for eg. United States"
+    },
+    "LOCALE_DISPLAY": {
+      "hidden": true
+    },
+    "LOCALE_LANGUAGE_ISO3": {
+      "hidden": true
+    },
+    "LOCALE_LANGUAGE_DISPLAY": {
+      "readable_name": "Locale Language",
+      "description": "Language of the user derived from device locale settings. for eg. English"
+    },
+    "LOCALE_COUNTRY": {
+      "hidden": true
+    },
+    "uninstall_time": {
+      "readable_name": "Uninstall Time",
+      "categories": ["Uninstall"],
+      "description": "Time when our system found a user has uninstalled the app."
+    },
+    "installed": {
+      "readable_name": "Install Status",
+      "categories": ["Uninstall"],
+      "description": "Current status of the user, If the user has the app installed on his device."
+    },
+    "moe_cr_from":{
+      "readable_name": "User Creation Source",
+      "categories": ["Lifecycle"],
+      "description": "Source from which this user was created",
+      "hidden": true
+    },
+    "u_n": {
+      "readable_name": "Name",
+      "description": "Full Name of the user."
+    },
+    "u_ln": {
+      "readable_name": "Last Name",
+      "description": "Last Name of the user."
+    },
+    "u_gd": {
+      "readable_name": "Gender",
+      "description": "Gender of the user."
+    },
+    "u_fn": {
+      "readable_name": "First Name",
+      "description": "First Name of the user."
+    },
+    "geo": {
+      "readable_name": "Location",
+      "description": "Latitude and Longitude of the user."
+    },
+    "MOE_GAID": {
+      "readable_name": "Google Advertising ID (Android)",
+      "categories": ["Device Data"],
+      "description": "Advertising Identifier of the device on which the app is installed."
+    },
+    "MOE_ISLAT": {
+      "readable_name": "Limited Ad Tracking (Android)",
+      "categories": ["Device Data"],
+      "hidden": true
+    },
+    "PUSH_PREFERENCE": {
+      "readable_name": "Push Opt In Status (iOS)",
+      "categories": ["Reachability"],
+      "description": "Push permission status of a user on iOS device."
+    },
+    "ADVERTISING_IDENTIFIER": {
+      "readable_name": "Advertising Identifier (iOS & Windows)",
+      "categories": ["Device Data"],
+      "description": "Advertising Identifier of the device on which the app is installed."
+    },
+    "INSTALL_REFERRER_MOE": {
+      "readable_name": "Install Referrer",
+      "categories": ["Acquisition"],
+      "hidden": true
+    },
+    "Web Subscription URL": {
+      "readable_name": "Web Push Subscription Page URL",
+      "categories": ["Reachability"],
+      "description": "Page URL of the web page on which a user subscribed to web push. Use it to find where the susbcriptions are happening on your website or categorize your subscribers to send targeted notifications"
+    },
+    "Web Migrated User": {
+      "hidden": true
+    },
+    "Web Push Preference": {
+      "readable_name": "Web Push Preference",
+      "categories": ["Reachability"],
+      "description": "Denotes the web push subscription status of a user. Use it to find your aggregate subscribers and users who unsubscribed after subscribing once.",
+      "hidden": true
+    },
+    "moe_sub_w": {
+      "readable_name": "Web Push Subscription Status",
+      "categories": ["Reachability"],
+      "description": "Denotes the web push subscription status of a user - True / False. Use it to find your aggregate subscribers and users who unsubscribed after subscribing once."
+    },
+    "moe_w_ds": {
+      "readable_name": "Browser Details",
+      "categories": ["Device Data"],
+      "description": "Browser details of web user includes - Platform, Browser, Manufacturer"
+    },
+    "moe_mweb": {
+      "readable_name": "Mobile User",
+      "categories": ["Device Data"],
+      "description": "Denotes if user accessed the website on mobile."
+    },
+    "moe_i_ov": {
+      "categories": ["Device Data"],
+      "readable_name": "OS Version iOS",
+      "hidden": true
+    },
+    "moe_it": {
+      "readable_name": "Creation Source",
+      "description": "Denotes the source through which a user was created"
+    }, 
+    "moe_spam": {
+      "readable_name": "Spam",
+      "categories": ["Email Suppression Type"],
+      "description": "Denotes if the user has reported an email as spam"
+    },
+    "moe_unsubscribe": {
+      "readable_name": "Unsubscribe",
+      "categories": ["Email Suppression Type"],
+      "description": "Denotes if the user has unsubscribed from an email"
+    },
+    "moe_hard_bounce": {
+      "readable_name": "Hard Bounce",
+      "categories": ["Email Suppression Type"],
+      "description": "Denotes if emails to the user have hard bounced"
+    },
+    "MOE_LAST_APP_RATING": {
+      "readable_name": "Last App Rating",
+      "description": "Denotes the last rating given by the user in InApp"
+    }
+  },
+  "action_count_thresholds": {
+    "DemoApp": 1500,
+    "default": 1000
+  },
+  "attribute_categories":[
+    "Lifecycle",
+    "Acquisition",
+    "Uninstall",
+    "Reachability",
+    "Localization",
+    "Email Suppression Type",
+    "Campaign Activity",
+    "Device Data",
+    "Tracked User Attributes",
+    "Tracked User Events"
+  ]
+}

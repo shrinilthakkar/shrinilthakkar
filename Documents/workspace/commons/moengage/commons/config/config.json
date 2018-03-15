@@ -1,0 +1,245 @@
+{
+    "logging": {
+        "log_level": "INFO"
+    },
+    "infra_type": {
+        "snapdeal": {
+            "db_names": [
+                "Snapdeal",
+                "SnapdealProcessed",
+                "ShopoLive",
+                "ShopoLiveProcessed",
+                "SDSellerZone",
+                "SDSellerZoneProcessed",
+                "SnapdealSellerZone",
+                "SnapdealSellerZoneProcessed",
+                "SnapdealTest",
+                "SnapdealTestProcessed",
+                "SnapdealSashi",
+                "SnapdealSashiProcessed"
+            ]
+        },
+        "segmentation": {
+            "db_names": [
+                "oplogs",
+                "MOEKeyMetrics",
+                "PipelineStatus",
+                "ProductOplogs",
+                "SegmentationConfig",
+                "SegmentationTrackers"
+            ]
+        }
+    },
+    "connections": {
+        "mongo": {
+            "default": {
+                "host": [
+                    "mongos0.moengage.com",
+                    "mongos1.moengage.com",
+                    "mongos2.moengage.com"
+                ],
+                "port": 27017
+            },
+            "staging": {
+                "host": [
+                    "mongos0.moengage.com",
+                    "mongos1.moengage.com"
+                ],
+                "port": 27017
+            },
+            "snapdeal": {
+                "host": [
+                    "mongos0.moe.net",
+                    "mongos1.moe.net"
+                ],
+                "port": 27017
+            },
+            "segmentation": {
+                "host": [
+                    "esmongonew.moengage.com"
+                ],
+                "port": 27017
+            },
+            "smarttrigger": {
+                "host": [
+                    "smarttriggerdb.moengage.com"
+                ],
+                "port": 27017
+            }
+        },
+        "cache": {
+            "fc": {
+                "host": "fcnew-cache.moengage.com",
+                "port": 6379,
+                "lazy": false,
+                "timeout": 5,
+                "db": 0
+            },
+            "st_fc": {
+                "host": "fcsmart-cache.moengage.com",
+                "port": 6379,
+                "lazy": true,
+                "timeout": 5,
+                "db": 0
+            },
+            "st_dedup": {
+                "host": "st-dedup-cache.moengage.com",
+                "port": 6379,
+                "lazy": false,
+                "timeout": 5,
+                "db": 0
+            },
+            "local": {
+                "host": "127.0.0.1",
+                "port": 6379,
+                "lazy": true,
+                "timeout": 5,
+                "db": 0
+            },
+            "productfeed": {
+                "host": "product-enrichment-cache.moengage.com",
+                "port": 6379,
+                "lazy": true,
+                "timeout": 5,
+                "db": 0
+            },
+            "prod": {
+                "host": "cacheprod.moengage.com",
+                "port": 6379,
+                "db": 0,
+                "timeout": 5,
+                "lazy": true,
+                "replica": [
+                    {
+                        "name": "prod_1",
+                        "host": "cacheprod.moengage.com",
+                        "port": 6379,
+                        "db": 0,
+                        "timeout": 5,
+                        "lazy": true
+                    }
+                ]
+            },
+            "push_campaign": {
+                "host": "inapp-dedup-cache.moengage.com",
+                "port": 6379,
+                "db": 0,
+                "timeout": 15,
+                "lazy": true
+            },
+            "smart_trigger": {
+                "host": "smarttrigger-cache.moengage.com",
+                "port": 6379,
+                "db": 0,
+                "timeout": 5,
+                "lazy": true
+            },
+            "bfilter": {
+                "host": "inappbloom-cache.moengage.com",
+                "port": 6379,
+                "db": 1,
+                "timeout": 15,
+                "lazy": true
+            },
+            "bfilterlocal": {
+                "host": "localhost",
+                "port": 6379,
+                "timeout": 5,
+                "db": 0,
+                "lazy": true
+            },
+            "allUsersCache_v2": {
+                "host": "allusers-cache.moengage.com",
+                "port": 6379,
+                "db": 0,
+                "timeout": 5,
+                "lazy": true
+            },
+            "default": {
+                "host": "defaultcache.moengage.com",
+                "port": 6379,
+                "db": 0,
+                "timeout": 5,
+                "lazy": true
+            }
+        },
+        "statsd": {
+            "host": "watchdog.moengage.com",
+            "port": 8125,
+            "prefix": "moengage"
+        },
+        "influxdb": {
+            "host": "influxdb.moengage.com",
+            "use_udp": true
+        },
+        "kafka": {
+            "default": {
+                "broker_version": "0.8.2.1",
+                "brokers": [
+                    "kafkabroker0.moengage.com",
+                    "kafkabroker1.moengage.com",
+                    "kafkabroker2.moengage.com",
+                    "kafkabroker3.moengage.com"
+                ],
+                "port": 10252
+            }
+        },
+        "zookeeper": {
+            "default": {
+                "connection_url": "zk1.moengage.com:2181,zk2.moengage.com:2181,zk3.moengage.com:2181/kafka-data"
+            }
+        }
+    },
+    "app_category": {
+        "xsmall": {
+            "min": 0,
+            "max": 10,
+            "oplog_max_size": 67108864,
+            "pipeline_throttle": 1
+        },
+        "small": {
+            "min": 10,
+            "max": 100000,
+            "oplog_max_size": 536870912,
+            "pipeline_throttle": 10
+        },
+        "medium": {
+            "min": 100000,
+            "max": 1000000,
+            "oplog_max_size": 2147483648,
+            "pipeline_throttle": 50
+        },
+        "large": {
+            "min": 1000000,
+            "max": 10000000,
+            "oplog_max_size": 5368709120,
+            "pipeline_throttle": 100
+        },
+        "xlarge": {
+            "min": 10000000,
+            "oplog_max_size": 10737418240,
+            "pipeline_throttle": 240
+        }
+    },
+    "watchdog_metrics": {
+        "metric_prefix_db_name_map": {
+            "segmentation": "segmentation_metrics",
+            "csv_segment_upload": "common_metrics",
+            "user_imports": "common_metrics",
+            "campaign_image": "campaign_metrics",
+            "geo_fence": "campaign_metrics",
+            "transaction": "campaign_metrics",
+            "product_feed": "segmentation_metrics",
+            "product_sets": "segmentation_metrics",
+            "sdk_config_api": "common_metrics",
+            "acl": "common_metrics"
+        },
+        "db_name_udp_port_map": {
+            "common_metrics": 8089,
+            "segmentation_metrics": 8090,
+            "campaign_metrics": 8091,
+            "unknown_metrics": 8092,
+            "neo4j_metrics": 8093
+        }
+    }
+}
