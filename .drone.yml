@@ -1,16 +1,11 @@
+workspace:
+  base: /go
+  path: src/github.com/drone-plugins/drone-npm
+
 pipeline:
-  build:
-    image: node:latest
-    image: golang
-    image: golang:1.7
-    image: library/golang:1.7
-    image: index.docker.io/library/golang
-    image: index.docker.io/library/golang:1.7
+  deps:
+    image: golang:1.10
+    pull: true
     commands:
-      - npm install
-      - npm run lint
-      - npm run test
-  publish:
-+   image: plugins/npm
-+   when:
-+     branch: master
+      - go get -u github.com/golang/dep/cmd/dep
+      - dep ensure
