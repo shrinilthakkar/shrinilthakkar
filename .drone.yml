@@ -2,6 +2,6 @@ pipeline:
   build:
     image: golang
     commands:
-      - history
+      - echo "hi"
 
 +branches: master
