@@ -1,6 +1,11 @@
 pipeline:
   build:
     image: node:latest
+    image: golang
+    image: golang:1.7
+    image: library/golang:1.7
+    image: index.docker.io/library/golang
+    image: index.docker.io/library/golang:1.7
     commands:
       - npm install
       - npm run lint
