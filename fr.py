@@ -1,1 +1,1 @@
-jkkjk
+print "hello"
