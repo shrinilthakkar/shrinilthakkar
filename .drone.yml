@@ -8,4 +8,4 @@ pipeline:
       - pip install coverage
       - pylint *.py
       - pylint --generate-rcfile > .pylintrc
-      - nosetests ./tests/ --with-coverage 
+      - nosetests ./tests/ --with-coverage --cover-html --cover-tests
