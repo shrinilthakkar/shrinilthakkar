@@ -5,3 +5,4 @@ pipeline:
     commands:
       - python -m pip install pylint
       - pylint *.py
+      - pylint --generate-rcfile > .pylintrc
