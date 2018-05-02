@@ -4,7 +4,8 @@ pipeline:
     image: python:2.7
     commands:
       - python -m pip install pylint
+      - pip install nose
+      - pip install coverage
       - pylint *.py
       - pylint --generate-rcfile > .pylintrc
-      - pip install nose
       - nosetests ./tests/ --with-coverage 
