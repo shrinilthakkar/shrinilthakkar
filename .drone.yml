@@ -1,0 +1,8 @@
+branches: [master]
+pipeline:
+  build:
+    image: python:2.7
+    commands:
+      - python -m pip install pylint
+      - pylint *.py
+      - pylint --generate-rcfile > .pylintrc

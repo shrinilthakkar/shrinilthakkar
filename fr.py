@@ -1,2 +1,2 @@
-print "this is wrong"
-print "rr"
+"""hhh"""
+print "hello"
