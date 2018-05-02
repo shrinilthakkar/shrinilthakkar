@@ -7,4 +7,4 @@ pipeline:
       - pylint *.py
       - pylint --generate-rcfile > .pylintrc
       - pip install nose
-      - nosetests *.py
+      - nosetests ./tests/ --with-coverage
