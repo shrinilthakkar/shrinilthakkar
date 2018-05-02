@@ -4,4 +4,5 @@ pipeline:
     image: python:2.7
     commands:
       - python -m pip install pylint
-      - pylint helloworld.py
+      - drone exec --commit.sha
+      - pylint
