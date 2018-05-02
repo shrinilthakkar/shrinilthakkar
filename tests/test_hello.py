@@ -1,1 +1,2 @@
-print "test case"
+def test_hello():
+  print "test case"
