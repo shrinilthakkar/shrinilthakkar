@@ -4,5 +4,5 @@ pipeline:
     image: python:2.7
     commands:
       - python -m pip install pylint
-      - drone exec --commit.sha
-      - pylint
+      - a = DRONE_COMMIT
+      - pylint a
