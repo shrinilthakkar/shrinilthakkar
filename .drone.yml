@@ -1,12 +1,22 @@
 branches: [master]
 pipeline:
-  install:
+
+  syntax_check:
     image: python:2.7
     commands:
       - python -m pip install pylint
-      - pip install nose
-      - pip install coverage
-      - pip install -U sphinx
       - pylint --generate-rcfile > .pylintrc
       - pylint *.py
+      
+  test:
+    image: python:2.7
+    commands:
+      - pip install nose
+      - pip install coverage
       - nosetests ./tests/ --with-coverage --cover-html --cover-tests
+      
+  documentation:
+    image: python:2.7
+    commands:
+      - pip install -U sphinx
+    
