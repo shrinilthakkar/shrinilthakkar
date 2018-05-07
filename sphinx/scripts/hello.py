@@ -1,6 +1,6 @@
 def func1():
     """
-    func1 inside hello.py
+    func1 
     """
     print "print statement for hello"
 
