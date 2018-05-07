@@ -3,7 +3,7 @@
 pushd %~dp0
 
 REM Command file for Sphinx documentation
-echo.***************
+
 if "%SPHINXBUILD%" == "" (
 	set SPHINXBUILD=sphinx-build
 )
