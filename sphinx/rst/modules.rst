@@ -4,4 +4,4 @@ scripts
 .. toctree::
    :maxdepth: 4
 
-   hello
+   ../shrinilthakkar/sphinx/rst/hello
