@@ -14,7 +14,7 @@
 #
 import os
 import sys
-sys.path.append('/opt/moengage/sphinx/scripts')
+sys.path.append('../shrinilthakkar/sphinx/scripts')
 
 
 # -- Project information -----------------------------------------------------
