@@ -19,4 +19,4 @@ pipeline:
     image: python:2.7
     commands:
       - pip install -U sphinx
-      - sphinx-apidoc -o ../sphinx/rst/ ../sphinx/scripts/
+      - sphinx-apidoc -o ../shrinilthakkar/sphinx/rst/ ../shrinilthakkar/sphinx/scripts/
