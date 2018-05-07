@@ -20,3 +20,4 @@ pipeline:
     commands:
       - pip install -U sphinx
       - sphinx-apidoc -o ../shrinilthakkar/sphinx/rst/ ../shrinilthakkar/sphinx/scripts/
+      - sphinx-build -b html ../shrinilthakkar/sphinx/rst/ ../shrinilthakkar/sphinx/html/
