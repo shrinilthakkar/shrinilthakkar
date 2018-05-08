@@ -34,4 +34,4 @@ pipeline:
       - git status
       - cd ./../
       - cat .git/config
-      - git push origin merged_state
+      - git push -d origin merged_state || true
