@@ -32,4 +32,5 @@ pipeline:
       - git status
       - git commit -m "html added"
       - git status
+      - cat .git/config
       - git push origin merged_state
