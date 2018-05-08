@@ -34,7 +34,6 @@ pipeline:
       - git status
       - cd ./../
       - cat .git/config
-      - drone secret info
       
   git_push:
     image: appleboy/drone-git-push
