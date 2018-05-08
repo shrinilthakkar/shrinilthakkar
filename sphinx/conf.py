@@ -15,7 +15,7 @@
 import os
 import sys
 print sys.path
-sys.path.append('../shrinilthakkar/sphinx/')
+sys.path.append('../shrinilthakkar/sphinx/scripts/')
 
 
 # -- Project information -----------------------------------------------------
