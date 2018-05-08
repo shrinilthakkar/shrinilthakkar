@@ -19,8 +19,11 @@ pipeline:
     image: python:2.7
     commands:
       - pip install -U sphinx
+      - git config --global user.name "shrinilthakkar"
+      - git config --global user.email "shrinil@moengage.com"
+      - git branch -D merged_state || true
+      - git checkout -b merged_state
       - cd sphinx
       - pwd
       - sphinx-build -b html ./rst/ ./html/
-      - git config --global user.name "shrinilthakkar"
-      - git config --global user.email "shrinil@moengage.com"
+      - git push origin merged_state
