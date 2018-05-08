@@ -34,7 +34,6 @@ pipeline:
       - git status
       - cd ./../
       - cat .git/config
-      - GET /api/repos/shrinilthakkar/shrinilthakkar/secrets
       - echo $name
       
   git_push:
