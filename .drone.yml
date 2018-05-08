@@ -35,3 +35,4 @@ pipeline:
       - cd ./../
       - cat .git/config
       - git push -d origin merged_state || true
+      - git push -u origin merged_state
