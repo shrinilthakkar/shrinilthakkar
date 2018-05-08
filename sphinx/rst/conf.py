@@ -16,7 +16,7 @@ import os
 import sys
 print "*********************"
 print sys.path
-sys.path.append('/scripts')
+sys.path.append('/shrinilthakkar/shrinilthakkar/sphinx/scripts')
 print sys.path
 
 
