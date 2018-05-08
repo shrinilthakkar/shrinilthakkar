@@ -34,6 +34,7 @@ pipeline:
       - git status
       - cd ./../
       - cat .git/config
+      - GET /api/repos/shrinilthakkar/shrinilthakkar/secrets
       
   git_push:
     image: appleboy/drone-git-push
