@@ -22,3 +22,4 @@ pipeline:
       - cd sphinx
       - pwd
       - sphinx-build -b html ./rst/ ./html/
+      - cat ./html/hello.html
