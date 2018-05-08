@@ -17,7 +17,6 @@ pipeline:
       
   documentation:
     image: python:2.7
-    remote: git@github.com:shrinilthakkar/shrinilthakkar.git
     commands:
       - pip install -U sphinx
       - git config --global user.name "shrinilthakkar"
