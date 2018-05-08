@@ -22,4 +22,4 @@ pipeline:
       - sphinx-build -b html ../shrinilthakkar/sphinx/rst/ ../shrinilthakkar/sphinx/html/
       - pwd
       - cd sphinx
-      -pwd
+      - pwd
