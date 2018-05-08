@@ -16,8 +16,7 @@ import os
 import sys
 print "*********************"
 print sys.path
-print pwd
-sys.path.append('../shrinilthakkar/sphinx/scripts')
+sys.path.append('./shrinilthakkar/sphinx/scripts')
 print sys.path
 
 
