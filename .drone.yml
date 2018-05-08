@@ -22,4 +22,5 @@ pipeline:
       - cd sphinx
       - pwd
       - sphinx-build -b html ./rst/ ./html/
-      - cat ./html/hello.html
+      - git config --global user.name "shrinilthakkar"
+      - git config --global user.email "shrinil@moengage.com"
