@@ -33,7 +33,6 @@ pipeline:
       - git status
       - git commit -m "html added"
       - git status
-      - pwd
       - cd ./../
       - cat .git/config
       - git push origin merged_state
