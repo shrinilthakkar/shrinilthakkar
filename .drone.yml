@@ -22,4 +22,5 @@ pipeline:
       - pwd
       - cd sphinx
       - pwd
-      - sphinx-build -b html ./rst/ ./html/
+      - sphinx-quickstart
+      #- sphinx-build -b html ./rst/ ./html/
