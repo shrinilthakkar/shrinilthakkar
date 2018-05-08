@@ -26,5 +26,5 @@ pipeline:
       - cd sphinx
       - pwd
       - sphinx-build -b html ./rst/ ./html/
-      - git remote -v
+      - git status
       - git push origin merged_state
