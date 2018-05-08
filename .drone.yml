@@ -20,7 +20,8 @@ pipeline:
     commands:
       - pip install -U sphinx
       - pwd
-      - cd sphinx
+      - mkdir sphinx2
+      - cd sphinx2
       - pwd
       - sphinx-quickstart
       #- sphinx-build -b html ./rst/ ./html/
