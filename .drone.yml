@@ -19,9 +19,6 @@ pipeline:
     image: python:2.7
     commands:
       - pip install -U sphinx
+      - cd sphinx
       - pwd
-      - mkdir sphinx2
-      - cd sphinx2
-      - pwd
-      - sphinx-quickstart
-      #- sphinx-build -b html ./rst/ ./html/
+      - sphinx-build -b html ./rst/ ./html/
