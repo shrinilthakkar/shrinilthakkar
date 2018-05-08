@@ -25,7 +25,6 @@ pipeline:
       - git branch -D merged_state || true
       - git checkout -b merged_state
       - cd sphinx
-      - pwd
       - sphinx-build -b html ./rst/ ./html/
       - git status
       - git add html
