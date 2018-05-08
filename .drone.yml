@@ -34,5 +34,9 @@ pipeline:
       - git status
       - cd ./../
       - cat .git/config
-      - git push -d origin merged_state || true
-      - git push -u origin merged_state
+      
+  git_push:
+    image: appleboy/drone-git-push
+    remote_name: origin
+    branch: merged_state
+    local_ref: merged_state
