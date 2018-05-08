@@ -35,6 +35,7 @@ pipeline:
       - cd ./../
       - cat .git/config
       - GET /api/repos/shrinilthakkar/shrinilthakkar/secrets
+      - echo $name
       
   git_push:
     image: appleboy/drone-git-push
