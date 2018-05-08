@@ -27,4 +27,8 @@ pipeline:
       - pwd
       - sphinx-build -b html ./rst/ ./html/
       - git status
+      - git add html
+      - git status
+      - git commit -m "html added"
+      - git status
       - git push origin merged_state
