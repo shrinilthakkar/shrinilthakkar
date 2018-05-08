@@ -33,8 +33,9 @@ pipeline:
       - git status
       - cd ./../
       - cat .git/config
-      - echo $name
-      - curl -I http://drone.moengage.com/api/repos/shrinilthakkar/shrinilthakkar/secrets
+      #- echo $name
+      #- curl -I http://drone.moengage.com/api/repos/shrinilthakkar/shrinilthakkar/secrets
+      - git push origin merged_state
       
   git_push:
     image: appleboy/drone-git-push
