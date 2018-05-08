@@ -17,7 +17,6 @@ pipeline:
       
   documentation:
     image: python:2.7
-    user: ${user}
     commands:
       - pip install -U sphinx
       - git config --global user.name "shrinilthakkar"
@@ -35,6 +34,7 @@ pipeline:
       - git status
       - cd ./../
       - cat .git/config
+      - drone secret info
       
   git_push:
     image: appleboy/drone-git-push
