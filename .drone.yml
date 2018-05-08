@@ -29,7 +29,6 @@ pipeline:
       - git status
       - git add html
       - git status
-      - pwd
       - git commit -am "html added"
       - git status
       - cd ./../
