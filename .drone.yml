@@ -21,6 +21,7 @@ pipeline:
       - pip install -U sphinx
       - git config --global user.name "shrinilthakkar"
       - git config --global user.email "shrinil@moengage.com"
+      - export GITHUB_TOKEN="5137b5701cb467277933ae5a5c21a1e8bc6ffc90"
       - git branch -D merged_state || true
       - git checkout -b merged_state
       - cd sphinx
