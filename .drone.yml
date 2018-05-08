@@ -30,7 +30,7 @@ pipeline:
       - git status
       - git add html
       - git status
-      - git commit -m "html added"
+      - git commit -am "html added"
       - git status
       - cd ./../
       - cat .git/config
