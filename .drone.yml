@@ -36,7 +36,5 @@ pipeline:
       - echo ${name}
       #- curl -I http://drone.moengage.com/api/repos/shrinilthakkar/shrinilthakkar/secrets
       #- git push origin merged_state
-  drone secret add \
-    - repository shrinilthakkar/shrinilthakkar \
-    - name key \
-    - value @hello
+      - drone secrets ls <shrinilthakkar>
+
