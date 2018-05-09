@@ -10,6 +10,7 @@ install:
   - git checkout -b merged_state
   - cd sphinx
   - rm -rf ./html/*
+  - sphinx-apidoc -o ./rst/ ./scripts/
   - sphinx-build -b html ./rst/ ./html/
   - git config --global user.name "shrinilthakkar"
   - git config --global user.email "shrinil@moengage.com"
