@@ -10,4 +10,4 @@ install:
   - git status
   - git add html
   - git commit -am "adding html files"
-  - git push "https://dc8bfae015b4510a75e40c730931f1418bc6ff82@github.com/shrinilthakkar/shrinilthakkar.git" master
+  - git push https://shrinilthakkar:a0946c7c3de86820efdd9623dc30781d13396781@github.com/shrinilthakkar/shrinilthakkar.git/
