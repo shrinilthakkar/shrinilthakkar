@@ -17,6 +17,8 @@ pipeline:
       
   documentation:
     image: python:2.7
+    environment:
+      - key=$$key
     commands:
       - pip install -U sphinx
       - git config --global user.name "shrinilthakkar"
@@ -30,7 +32,7 @@ pipeline:
       - cat ./html/hello.html
       - git add html
       - git commit -am "html added"
-      - git push https://shrinilthakkar:$${key}@github.com/shrinilthakkar/shrinilthakkar.git/
+      - git push https://shrinilthakkar:${key}@github.com/shrinilthakkar/shrinilthakkar.git/ merged_state
       - cd ./../
       #- cat .git/config
       #- echo ${name}
