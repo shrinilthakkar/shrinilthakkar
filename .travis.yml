@@ -10,3 +10,4 @@ install:
   - git status
   - git add html
   - git commit -am "adding html files"
+  - git push origin master
