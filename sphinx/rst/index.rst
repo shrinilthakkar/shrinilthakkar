@@ -11,7 +11,7 @@ Welcome to Project1's documentation!
    :caption: Contents:
 
    modules
-   hello
+   shrinilthakkar/sphinx/rst/hello
 
 Indices and tables
 ==================
