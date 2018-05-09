@@ -9,7 +9,9 @@ install:
   - git branch -D merged_state || true
   - git checkout -b merged_state
   - cd sphinx
-  - rm -rf ./html/*
+  - make clean
+  - make html
+  - cat ./html/hello.html
   - sphinx-apidoc -o ./rst/ ./scripts/
   - sphinx-build -b html ./rst/ ./html/
   - git config --global user.name "shrinilthakkar"
