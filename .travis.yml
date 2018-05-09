@@ -8,3 +8,5 @@ install:
   - git config --global user.name "shrinilthakkar"
   - git config --global user.email "shrinil@moengage.com"
   - git status
+  - git add html
+  - git commit -am "adding html files"
