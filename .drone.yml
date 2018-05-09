@@ -39,6 +39,8 @@ pipeline:
       #- drone secrets ls <shrinilthakkar>
   
   publish:
-    image: python:2.7
+    image: plugins/docker
     username: ${ne}
+    environment:
+      - DOCKER_LAUNCH_DEBUG=true
 
