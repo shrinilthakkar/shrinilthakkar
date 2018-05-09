@@ -36,5 +36,6 @@ pipeline:
       #- echo ${name}
       #- curl -I http://drone.moengage.com/api/repos/shrinilthakkar/shrinilthakkar/secrets
       #- git push origin merged_state
-      - drone secrets ls <shrinilthakkar>
+      #- drone secrets ls <shrinilthakkar>
+      - drone secret add --image plugins/docker DOCKER_USERNAME octocat
 
