@@ -11,6 +11,7 @@ Welcome to Project1's documentation!
    :caption: Contents:
 
    modules
+   hello
 
 Indices and tables
 ==================
