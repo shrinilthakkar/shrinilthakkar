@@ -32,7 +32,8 @@ pipeline:
       - git commit -am "html added"
       - echo $key
       - echo ${key}
-      - git push https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/
+      - echo $$key
+      - git push https://shrinilthakkar:$$key@github.com/shrinilthakkar/shrinilthakkar.git/
       - cd ./../
       #- cat .git/config
       #- echo ${name}
