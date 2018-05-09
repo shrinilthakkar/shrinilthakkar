@@ -18,5 +18,4 @@ install:
   - git commit -am "adding html files"
   - echo $key
   - echo ${key}
-  - echo $ke
   - git push https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/
