@@ -1,2 +1,2 @@
-"""hhh"""
+"""hh"""
 print "hello"
