@@ -12,7 +12,7 @@ install:
   - make clean
   - make html
   - cat ./html/hello.html
-  - sphinx-apidoc -o ./rst/ ./scripts/
+  #- sphinx-apidoc -o ./rst/ ./scripts/
   - sphinx-build -b html ./rst/ ./html/
   - git config --global user.name "shrinilthakkar"
   - git config --global user.email "shrinil@moengage.com"
