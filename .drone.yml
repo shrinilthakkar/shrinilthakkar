@@ -35,10 +35,8 @@ pipeline:
       - cat .git/config
       - echo ${name}
       #- curl -I http://drone.moengage.com/api/repos/shrinilthakkar/shrinilthakkar/secrets
-      - git push origin merged_state
-      
-  git_push:
-    image: appleboy/drone-git-push
-    remote_name: origin
-    branch: merged_state
-    local_ref: merged_state
+      #- git push origin merged_state
+  drone secret add \
+    - repository shrinilthakkar/shrinilthakkar \
+    - name key \
+    - @hello
