@@ -31,6 +31,7 @@ pipeline:
       - git add html
       - git status
       - git commit -am "html added"
+      - git push "https://5137b5701cb467277933ae5a5c21a1e8bc6ffc90@github.com/shrinilthakkar/shrinilthakkar.git" merged_state
       - git status
       - cd ./../
       #- cat .git/config
