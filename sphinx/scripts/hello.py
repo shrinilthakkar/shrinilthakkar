@@ -1,6 +1,6 @@
 def func1():
     """
-    func 1
+    func 1**************************************************************
     """
     print "print statement for hello"
 
