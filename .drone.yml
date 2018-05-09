@@ -40,6 +40,5 @@ pipeline:
       #- drone secrets ls <shrinilthakkar>
   
   publish:
-    image: plugins/docker
-      - drone secret add --image plugins/docker DOCKER_USERNAME octocat
+    username: ${name}
 
