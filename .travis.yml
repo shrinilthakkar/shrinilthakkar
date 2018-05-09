@@ -10,5 +10,5 @@ install:
   - git status
   - git add html
   - git commit -am "adding html files"
-  - echo @name
+  - echo $name
   #- git push https://shrinilthakkar:a0946c7c3de86820efdd9623dc30781d13396781@github.com/shrinilthakkar/shrinilthakkar.git/
