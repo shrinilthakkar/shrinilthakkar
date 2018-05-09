@@ -28,19 +28,12 @@ pipeline:
       - cd sphinx
       - sphinx-build -b html ./rst/ ./html/
       - cat ./html/hello.html
-      - git status
       - git add html
       - git commit -am "html added"
-      - git push https://shrinilthakkar:a0946c7c3de86820efdd9623dc30781d13396781@github.com/shrinilthakkar/shrinilthakkar.git/ merged_state
+      - git push https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/
       - cd ./../
       #- cat .git/config
       #- echo ${name}
       #- curl -I http://drone.moengage.com/api/repos/shrinilthakkar/shrinilthakkar/secrets
       #- git push origin merged_state
       #- drone secrets ls <shrinilthakkar>
-  
-  publish:
-    image: plugins/docker
-    repo: shrinilthakkar/shrinilthakkar
-    secrets: [ docker_username , docker_password ]
-
