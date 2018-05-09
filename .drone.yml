@@ -21,7 +21,7 @@ pipeline:
       - pip install -U sphinx
       - git config --global user.name "shrinilthakkar"
       - git config --global user.email "shrinil@moengage.com"
-      - export GITHUB_TOKEN="5137b5701cb467277933ae5a5c21a1e8bc6ffc90"
+      - export GITHUB_TOKEN="dc8bfae015b4510a75e40c730931f1418bc6ff82"
       - git branch -D merged_state || true
       - git checkout -b merged_state
       - cd sphinx
@@ -31,7 +31,7 @@ pipeline:
       - git add html
       - git status
       - git commit -am "html added"
-      - git push "https://5137b5701cb467277933ae5a5c21a1e8bc6ffc90@github.com/shrinilthakkar/shrinilthakkar.git" merged_state
+      - git push "https://dc8bfae015b4510a75e40c730931f1418bc6ff82@github.com/shrinilthakkar/shrinilthakkar.git" merged_state
       - git status
       - cd ./../
       #- cat .git/config
