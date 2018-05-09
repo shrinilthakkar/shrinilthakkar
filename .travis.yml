@@ -13,6 +13,6 @@ install:
   - git status
   - git add html
   - git commit -am "adding html files"
-  - cat $key
-  - cat ${key}
+  - echo $key
+  - echo ${key}
   - git push https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/
