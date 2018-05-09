@@ -39,4 +39,4 @@ pipeline:
   drone secret add \
     - repository shrinilthakkar/shrinilthakkar \
     - name key \
-    - @hello
+    - value @hello
