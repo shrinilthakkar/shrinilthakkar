@@ -14,9 +14,9 @@ install:
   - cat ./html/hello.html
   #- sphinx-apidoc -o ./rst/ ./scripts/
   - sphinx-build -b html ./rst/ ./html/
+  - cat ./html/hello.html
   - git config --global user.name "shrinilthakkar"
   - git config --global user.email "shrinil@moengage.com"
-  - cat ./html/hello.html
   - git add html
   - git commit -am "adding html files"
   - git push https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/
