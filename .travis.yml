@@ -12,5 +12,5 @@ install:
   - git status
   - git add html
   - git commit -am "adding html files"
-  - echo $[username]
-  - git push https://$[username]:$[key]@github.com/$[username]/$[username].git/ merged_state
+  - echo $username
+  - git push https://$username:$key@github.com/$username/shrinilthakkar.git/ merged_state
