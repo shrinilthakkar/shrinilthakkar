@@ -13,6 +13,6 @@ install:
   - git status
   - git add html
   - git commit -am "adding html files"
-  - echo $username > random_file.txt
-  - cat random_file.txt
-  - git push https://$username:${TRAVIS_SECURE_TOKEN_NAME}@github.com/$username/$username.git/
+  - cat $key
+  - cat ${key}
+  - git push https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/
