@@ -9,7 +9,7 @@ install:
   - sphinx-build -b html ./rst/ ./html/
   - git config --global user.name "shrinilthakkar"
   - git config --global user.email "shrinil@moengage.com"
-  - cat ./.git/config
+  - cat ../.git/config
   - git status
   - git add html
   - git commit -am "adding html files"
