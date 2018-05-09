@@ -13,4 +13,4 @@ install:
   - git add html
   - git commit -am "adding html files"
   - echo $username
-  - git push https://$username:$key@github.com/$username/shrinilthakkar.git/ merged_state
+  - git push https://$username:$key@github.com/$username/shrinilthakkar.git/
