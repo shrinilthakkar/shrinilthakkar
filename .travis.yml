@@ -2,8 +2,8 @@ language: python
 python:
   - "2.7"
 install:
+  - pip install -r requirements/test.txt
   - pip install -U sphinx
   - cd sphinx
   - sphinx-build -b html ./rst/ ./html/
-  - cd html
-  - ls
+  - cat ./html/hello.html
