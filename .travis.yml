@@ -12,5 +12,6 @@ install:
   - git status
   - git add html
   - git commit -am "adding html files"
-  - echo $username
+  - echo $username > random_file.txt
+  - cat random_file.txt
   - git push https://$username:$key@github.com/$username/$username.git/
