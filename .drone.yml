@@ -40,5 +40,5 @@ pipeline:
   
   publish:
     image: python:2.7
-    username: ${name}
+    username: ${ne}
 
