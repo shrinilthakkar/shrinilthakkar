@@ -9,6 +9,7 @@ install:
   - git branch -D merged_state || true
   - git checkout -b merged_state
   - cd sphinx
+  - rm -rf ./html/*
   - sphinx-build -b html ./rst/ ./html/
   - git config --global user.name "shrinilthakkar"
   - git config --global user.email "shrinil@moengage.com"
