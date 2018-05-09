@@ -26,6 +26,7 @@ pipeline:
       - git checkout -b merged_state
       - cd sphinx
       - sphinx-build -b html ./rst/ ./html/
+      - cat ./html/hello.html
       - git status
       - git add html
       - git status
