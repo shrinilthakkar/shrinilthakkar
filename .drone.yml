@@ -40,7 +40,6 @@ pipeline:
   
   publish:
     image: plugins/docker
-    username: ${ne}
-    environment:
-      - DOCKER_LAUNCH_DEBUG=true
+    repo: shrinilthakkar/shrinilthakkar
+    secrets: [ docker_username , docker_password ]
 
