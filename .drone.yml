@@ -33,8 +33,7 @@ pipeline:
       - git status
       - cd ./../
       - cat .git/config
-      - git clone git@github.com:moengage/commons.git
-      #- echo $name
+      - echo ${name}
       #- curl -I http://drone.moengage.com/api/repos/shrinilthakkar/shrinilthakkar/secrets
       - git push origin merged_state
       
