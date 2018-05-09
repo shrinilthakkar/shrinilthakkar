@@ -32,10 +32,9 @@ pipeline:
       - cat ./html/hello.html
       - git add html
       - git commit -am "html added"
-      - git push https://shrinilthakkar:${key}@github.com/shrinilthakkar/shrinilthakkar.git/ merged_state
+      - git push https://shrinilthakkar:key@github.com/shrinilthakkar/shrinilthakkar.git/ merged_state
       - cd ./../
       #- cat .git/config
-      #- echo ${name}
       #- curl -I http://drone.moengage.com/api/repos/shrinilthakkar/shrinilthakkar/secrets
       #- git push origin merged_state
       #- drone secrets ls <shrinilthakkar>
