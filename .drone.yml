@@ -23,8 +23,8 @@ pipeline:
       - git config --global user.email "shrinil@moengage.com"
       - export GITHUB_TOKEN="dc8bfae015b4510a75e40c730931f1418bc6ff82"
       - git branch -D merged_state || true
-      #- git checkout -b merged_state
-      - git checkout --orphan gh-pages
+      - git checkout -b merged_state
+      #- git checkout --orphan gh-pages
       - cd sphinx
       - sphinx-build -b html ./rst/ ./html/
       - cat ./html/hello.html
@@ -32,8 +32,7 @@ pipeline:
       - git add html
       - git status
       - git commit -am "html added"
-      - git push -u origin gh-pages
-      #- git push "https://dc8bfae015b4510a75e40c730931f1418bc6ff82@github.com/shrinilthakkar/shrinilthakkar.git" merged_state
+      - git push https://shrinilthakkar:a0946c7c3de86820efdd9623dc30781d13396781@github.com/shrinilthakkar/shrinilthakkar.git/ merged_state
       - cd ./../
       #- cat .git/config
       #- echo ${name}
