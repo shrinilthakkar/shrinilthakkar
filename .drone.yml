@@ -25,6 +25,9 @@ pipeline:
       - git checkout -b merged_state
       #- git checkout --orphan gh-pages
       - cd sphinx
+      - make clean
+      - make html
+      - cat ./html/hello.html
       - sphinx-build -b html ./rst/ ./html/
       - cat ./html/hello.html
       - git add html

@@ -10,7 +10,8 @@ Welcome to Project1's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   modules
+   rst/modules
+   rst/index
 
 Indices and tables
 ==================
