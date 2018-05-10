@@ -15,8 +15,10 @@
 import os
 import sys
 print "******************"
-print os.getcwd()
-sys.path.append('/travis/src/github.com/shrinilthakkar/shrinilthakkar/sphinx-local/scripts')
+current_path = os.getcwd()
+r = current_path.rfind('/')
+current_path = current_path[0:r]
+sys.path.append(current_path)
 print sys.path
 
 
