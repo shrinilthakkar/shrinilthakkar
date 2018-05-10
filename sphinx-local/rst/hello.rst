@@ -1,7 +1,7 @@
 hello module
 ============
 
-.. automodule::
+.. automodule:: hello
     :members:
     :undoc-members:
     :show-inheritance:
