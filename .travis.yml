@@ -17,6 +17,6 @@ install:
   - cat ./html/hello.html
   - git config --global user.name "shrinilthakkar"
   - git config --global user.email "shrinil@moengage.com"
-  - git add html
+  - git add .
   - git commit -am "adding html files"
   - git push https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/
