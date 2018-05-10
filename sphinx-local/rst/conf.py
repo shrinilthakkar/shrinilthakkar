@@ -15,8 +15,8 @@
 import os
 import sys
 print "******************"
-print sys.path
-sys.path.append('/drone/src/github.com/shrinilthakkar/shrinilthakkar/sphinx-local/scripts')
+print os.getcwd()
+sys.path.append('/travis/src/github.com/shrinilthakkar/shrinilthakkar/sphinx-local/scripts')
 print sys.path
 
 
