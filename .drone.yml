@@ -30,6 +30,7 @@ pipeline:
       - cat ./html/hello.html
       - sphinx-build -b html ./rst/ ./html/
       - cat ./html/hello.html
+      - cat ./_build/html/hello.html
       - git add html
       - git commit -am "html added"
       #- drone secrets add shrinilthakkar/shrinilthakkar KEY bcbff33fd3183109e280b38ab645e7e83c58e853
