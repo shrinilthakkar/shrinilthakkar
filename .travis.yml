@@ -19,4 +19,4 @@ install:
   - git config --global user.email "shrinil@moengage.com"
   - git add .
   - git commit -am "adding html files"
-  - git push https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/
+  - git push -u https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/ merged_state
