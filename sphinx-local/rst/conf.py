@@ -17,7 +17,7 @@ import sys
 print "******************"
 current_path = os.getcwd()
 r = current_path.rfind('/')
-current_path = current_path[0:r]
+current_path = current_path[0:r] + "/scripts"
 sys.path.append(current_path)
 print sys.path
 
