@@ -1,7 +1,7 @@
 hello module
 ============
 
-.. automodule:: hello
+.. automodule:: ../shrinilthakkar/sphinx/scripts/hello
     :members:
     :undoc-members:
     :show-inheritance:
