@@ -13,7 +13,7 @@ install:
   - make clean
   - make html
   - cat ./html/hello.html
-  #- sphinx-apidoc -o ./rst/ ./scripts/
+  - sphinx-apidoc -o ./rst/ ./scripts/
   - sphinx-build -b html ./rst/ ./html/
   - cat ./html/hello.html
   - echo 'ab************ab'
