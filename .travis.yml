@@ -7,16 +7,17 @@ python:
 install:
   - pip install -U sphinx
   - git branch -D merged_state || true
+  - git push -D https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/ merged_state || true
   - git checkout -b merged_state
   - cd sphinx
   - make clean
   - make html
   - cat ./html/hello.html
   #- sphinx-apidoc -o ./rst/ ./scripts/
-  - sphinx-build -b html ./rst/ ./html/
-  - cat ./html/hello.html
+  #- sphinx-build -b html ./rst/ ./html/
+  #- cat ./html/hello.html
   - git config --global user.name "shrinilthakkar"
   - git config --global user.email "shrinil@moengage.com"
-  - git add .
+  - git add html
   - git commit -am "adding html files"
   - git push -u https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/ merged_state
