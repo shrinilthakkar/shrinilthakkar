@@ -15,8 +15,9 @@
 import os
 import sys
 print "####################"
-print os.getcwd()
-sys.path.append('../shrinilthakkar/sphinx-local/scripts')
+current_path = os.getcwd()
+current_path = current_path + "/scripts"
+sys.path.append(current_path)
 print sys.path
 
 
