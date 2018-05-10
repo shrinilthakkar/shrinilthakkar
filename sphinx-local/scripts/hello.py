@@ -6,13 +6,13 @@ def func1():
 
 def func2():
     """
-    func2 inside hello.py
+    ##################. func2 inside hello.py
     """
     print "print statement for func2"
 
 def func3():
     """
-    func3 is here
+    $$$$$$$$$$$$$$$$$$$$$$$$$$ func3 is here
     """
     print "func3 in hello.py"
 
