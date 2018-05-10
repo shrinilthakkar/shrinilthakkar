@@ -16,6 +16,8 @@ install:
   #- sphinx-apidoc -o ./rst/ ./scripts/
   - sphinx-build -b html ./rst/ ./html/
   - cat ./html/hello.html
+  - echo 'ab************ab'
+  - cat ./_build/html/genindex.html
   - git config --global user.name "shrinilthakkar"
   - git config --global user.email "shrinil@moengage.com"
   - git add html
