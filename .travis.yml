@@ -8,12 +8,12 @@ python:
 install:
   - python -m pip install pylint
   - pylint --generate-rcfile > .pylintrc
-  - pylint sphinx-local/scripts/*.py
+  - pylint ./sphinx-local/scripts/*.py
 
 before_script:
   - python -m pip install pylint
   - pylint --generate-rcfile > .pylintrc
-  - pylint sphinx-local/scripts/*.py
+  - pylint ./sphinx-local/scripts/*.py
   
 script:
   - pip install -U sphinx
