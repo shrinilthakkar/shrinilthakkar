@@ -13,7 +13,7 @@ install:
 before_script:
   - python -m pip install pylint
   - pylint --generate-rcfile > .pylintrc
-  - pylint ./sphinx-local/scripts/*.py
+  - pylint *.py
   
 script:
   - pip install -U sphinx
