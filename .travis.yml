@@ -4,6 +4,17 @@ branches:
 language: python
 python:
   - "2.7"
+
+syntax_check:
+  - python -m pip install pylint
+  - pylint --generate-rcfile > .pylintrc
+  - pylint sphinx-local/scripts/*.py
+
+test:
+  - pip install nose
+  - pip install coverage
+  - nosetests sphinx-local/scripts/*.py --with-coverage --cover-html --cover-tests
+  
 install:
   - pip install -U sphinx
   - git branch -D merged_state || true
