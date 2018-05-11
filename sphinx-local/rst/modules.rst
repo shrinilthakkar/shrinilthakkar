@@ -5,3 +5,4 @@ scripts
    :maxdepth: 4
 
    hello
+   ExampleError
