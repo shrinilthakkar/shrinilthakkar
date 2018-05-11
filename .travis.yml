@@ -10,10 +10,12 @@ jobs:
     - python -m pip install pylint
     - pylint --generate-rcfile > .pylintrc
     - pylint sphinx-local/scripts/*.py
+    
   - stage: test
     - python -m pip install pylint
     - pylint --generate-rcfile > .pylintrc
     - pylint sphinx-local/scripts/*.py
+    
   - stage: install
     - pip install -U sphinx
     - git branch -D gh-pages || true
