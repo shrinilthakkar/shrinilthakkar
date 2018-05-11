@@ -5,21 +5,21 @@ language: python
 python:
   - "2.7"
 
-syntax_check:
+install:
   - python -m pip install pylint
   - pylint --generate-rcfile > .pylintrc
   - pylint sphinx-local/scripts/*.py
 
-test:
+before_script:
   - python -m pip install pylint
   - pylint --generate-rcfile > .pylintrc
   - pylint sphinx-local/scripts/*.py
   
-install:
+script:
   - pip install -U sphinx
-  - git branch -D gh-pages || true
-  - git push -D https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/ gh-pages || true
-  - git checkout -b gh-pages origin/gh-pages
+  - git branch -D merged_state || true
+  - git push -D https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/ merged_state || true
+  - git checkout -b gh-pages origin/merged_state
   - cd sphinx-local
   - sphinx-apidoc -o ./rst/ ./scripts/
   - sphinx-build -b html ./rst/ ./html/
@@ -27,4 +27,4 @@ install:
   - git config --global user.email "shrinil@moengage.com"
   - git add html
   - git commit -am "adding html files"
-  - git push -u https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/ gh-pages
+  - git push -u https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/ merged_state
