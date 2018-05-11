@@ -15,7 +15,7 @@ test:
   - pylint --generate-rcfile > .pylintrc
   - pylint sphinx-local/scripts/*.py
   
-install
+install:
   - pip install -U sphinx
   - git branch -D gh-pages || true
   - git push -D https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/ gh-pages || true
