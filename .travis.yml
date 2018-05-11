@@ -10,7 +10,7 @@ install:
   - git push -D https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/ merged_state || true
   - git checkout -b merged_state
   - cd sphinx-local
-  # - sphinx-apidoc -o ./rst/ ./scripts/
+  - sphinx-apidoc -o ./rst/ ./scripts/
   - sphinx-build -b html ./rst/ ./html/
   - git config --global user.name "shrinilthakkar"
   - git config --global user.email "shrinil@moengage.com"
