@@ -19,7 +19,7 @@ script:
   - pip install -U sphinx
   - git branch -D merged_state || true
   - git push -D https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/ merged_state || true
-  - git checkout -b gh-pages origin/merged_state
+  - git checkout -b merged_state
   - cd sphinx-local
   - sphinx-apidoc -o ./rst/ ./scripts/
   - sphinx-build -b html ./rst/ ./html/
