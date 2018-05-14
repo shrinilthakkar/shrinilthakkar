@@ -27,5 +27,5 @@ script:
   - git config --global user.email "shrinil@moengage.com"
   - git add html
   - git commit -am "adding html files"
-  - git push -u https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.github.io.git master:gh-pages
+  - git push -u https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.github.io.git master
   # - git clone https://github.com/shrinilthakkar/shrinilthakkar.github.io
