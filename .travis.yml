@@ -22,7 +22,7 @@ script:
   - git checkout -b gh-pages
   - sphinx-apidoc -o ./sphinx-local/rst/ ./sphinx-local/scripts/
   - sphinx-build -b html ./sphinx-local/rst/ ./sphinx-local/html/
-  - cp ./sphinx-local/html/index.html .
+  - cp ./sphinx-local/html/*.* .
   - git config --global user.name "shrinilthakkar"
   - git config --global user.email "shrinil@moengage.com"
   - git add .
