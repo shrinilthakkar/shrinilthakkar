@@ -1,7 +1,6 @@
 branches:
   only:
     - master
-  if: type IN (push)
 
 language: python
 python:
@@ -11,11 +10,13 @@ install:
   - python -m pip install pylint
   - pylint --generate-rcfile > .pylintrc
   - pylint *.py
+    if: type IN (pull_request)
 
 before_script:
   - pip install nose
   - pip install coverage
   - nosetests ./tests/ --with-coverage --cover-html --cover-tests
+    if: type IN (pull_request)
   
 script:
   - pip install -U sphinx
@@ -33,3 +34,4 @@ script:
   # - git fetch https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.github.io.git master
   - git push -u https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/ gh-pages
   # - git clone https://github.com/shrinilthakkar/shrinilthakkar.github.io
+    if: type IN (push)
