@@ -23,9 +23,10 @@ script:
   - cd sphinx-local
   - sphinx-apidoc -o ./rst/ ./scripts/
   - sphinx-build -b html ./rst/ ./html/
+  - cp ./html/* ../../.
   - git config --global user.name "shrinilthakkar"
   - git config --global user.email "shrinil@moengage.com"
-  - git add html
+  - git add .
   - git commit -am "adding html files"
   # - git fetch https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.github.io.git master
   - git push -u https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/ gh-pages
