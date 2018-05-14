@@ -17,7 +17,7 @@ before_script:
   - nosetests ./tests/ --with-coverage --cover-html --cover-tests
   
 script:
-  if: type IN (push)
+  # if: type IN (push)
   - pip install -U sphinx
   - git branch -D gh-pages || true
   - git push -D https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/ gh-pages || true
