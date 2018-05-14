@@ -30,6 +30,7 @@ script:
     - git config --global user.email "shrinil@moengage.com"
     - git add .
     - git commit -am "adding html files"
+    # - jkkj 
     # - git fetch https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.github.io.git master
     - git push -u https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/ gh-pages
     # - git clone https://github.com/shrinilthakkar/shrinilthakkar.github.io
