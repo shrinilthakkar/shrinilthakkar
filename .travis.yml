@@ -37,4 +37,4 @@ script:
   - git commit -am "adding html files" 
   # - git fetch https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.github.io.git master
   - git push -u https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/ gh-pages
-  # - git clone https://github.com/shrinilthakkar/shrinilthakkar.github.io
+  #- git clone https://github.com/shrinilthakkar/shrinilthakkar.github.io
