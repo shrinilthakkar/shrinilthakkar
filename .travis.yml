@@ -18,7 +18,6 @@ before_script:
   - nosetests ./tests/ --with-coverage --cover-html --cover-tests
   
 script:
-  # if: type IN (push)
   - pip install -U sphinx
   - git branch -D gh-pages || true
   - git push -D https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/ gh-pages || true
@@ -30,8 +29,7 @@ script:
   - git config --global user.name "shrinilthakkar"
   - git config --global user.email "shrinil@moengage.com"
   - git add .
-  - git commit -am "adding html files"
-  # - jkkj 
+  - git commit -am "adding html files" 
   # - git fetch https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.github.io.git master
   - git push -u https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/ gh-pages
   # - git clone https://github.com/shrinilthakkar/shrinilthakkar.github.io
