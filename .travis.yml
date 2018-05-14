@@ -1,19 +1,18 @@
 branches:
   only:
     - master
+  if: type IN (push)
 
 language: python
 python:
   - "2.7"
 
 install:
-  if: type IN (push)
   - python -m pip install pylint
   - pylint --generate-rcfile > .pylintrc
   - pylint *.py
 
 before_script:
-  if: type IN (push)
   - pip install nose
   - pip install coverage
   - nosetests ./tests/ --with-coverage --cover-html --cover-tests
