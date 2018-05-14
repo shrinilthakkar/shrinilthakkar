@@ -23,7 +23,7 @@ pipeline:
       - git config --global user.email "shrinil@moengage.com"
       - git branch -D merged_state || true
       - git checkout -b merged_state
-      #- git checkout --orphan gh-pages
+      # - git checkout --orphan gh-pages
       - cd sphinx-local
       - make clean
       - make html
