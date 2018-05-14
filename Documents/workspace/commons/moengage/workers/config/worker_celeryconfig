@@ -1,0 +1,14 @@
+CELERYD_NODES={worker_nodes_list}
+
+CELERY_BIN="/usr/local/bin/celery"
+
+CELERYD_LOG_FILE="/var/log/celery/%N.log"
+CELERYD_PID_FILE="/var/log/celery/%N.pid"
+
+CELERYD_CHDIR={worker_logs_dir}
+CELERYD_USER="ubuntu"
+
+CELERY_CREATE_DIRS=1
+CELERYD_TASK_TIME_LIMIT=60
+
+CELERYD_OPTS="-Q {worker_queue_names} {worker_run_mode}"
