@@ -18,19 +18,19 @@ before_script:
   
 script:
   if: type IN (push)
-    - pip install -U sphinx
-    - git branch -D gh-pages || true
-    - git push -D https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/ gh-pages || true
-    - git checkout -b gh-pages
-    - rm -rf ./sphinx-local/html/*
-    - sphinx-apidoc -o ./sphinx-local/rst/ ./sphinx-local/scripts/
-    - sphinx-build -b html ./sphinx-local/rst/ ./sphinx-local/html/
-    - cp -R ./sphinx-local/html/* .
-    - git config --global user.name "shrinilthakkar"
-    - git config --global user.email "shrinil@moengage.com"
-    - git add .
-    - git commit -am "adding html files"
-    # - jkkj 
-    # - git fetch https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.github.io.git master
-    - git push -u https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/ gh-pages
-    # - git clone https://github.com/shrinilthakkar/shrinilthakkar.github.io
+  - pip install -U sphinx
+  - git branch -D gh-pages || true
+  - git push -D https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/ gh-pages || true
+  - git checkout -b gh-pages
+  - rm -rf ./sphinx-local/html/*
+  - sphinx-apidoc -o ./sphinx-local/rst/ ./sphinx-local/scripts/
+  - sphinx-build -b html ./sphinx-local/rst/ ./sphinx-local/html/
+  - cp -R ./sphinx-local/html/* .
+  - git config --global user.name "shrinilthakkar"
+  - git config --global user.email "shrinil@moengage.com"
+  - git add .
+  - git commit -am "adding html files"
+  # - jkkj 
+  # - git fetch https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.github.io.git master
+  - git push -u https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/ gh-pages
+  # - git clone https://github.com/shrinilthakkar/shrinilthakkar.github.io
