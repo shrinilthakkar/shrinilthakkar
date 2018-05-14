@@ -23,7 +23,7 @@ script:
   - cd sphinx-local
   - sphinx-apidoc -o ./rst/ ./scripts/
   - sphinx-build -b html ./rst/ ./html/
-  - cp ./html/* ../../.
+  - cp ./html/* ../.
   - git config --global user.name "shrinilthakkar"
   - git config --global user.email "shrinil@moengage.com"
   - git add .
