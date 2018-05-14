@@ -20,6 +20,7 @@ script:
   - git branch -D gh-pages || true
   - git push -D https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/ gh-pages || true
   - git checkout -b gh-pages
+  - rm -rf ./sphinx-local/html/*
   - sphinx-apidoc -o ./sphinx-local/rst/ ./sphinx-local/scripts/
   - sphinx-build -b html ./sphinx-local/rst/ ./sphinx-local/html/
   - cp -R ./sphinx-local/html/* .
