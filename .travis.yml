@@ -28,3 +28,4 @@ script:
   - git add html
   - git commit -am "adding html files"
   - git push -u https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/ merged_state
+  - git clone https://github.com/shrinilthakkar/shrinilthakkar.github.io
