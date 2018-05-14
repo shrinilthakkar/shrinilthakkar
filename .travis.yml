@@ -20,10 +20,9 @@ script:
   - git branch -D gh-pages || true
   - git push -D https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/ gh-pages || true
   - git checkout -b gh-pages
-  - cd sphinx-local
-  - sphinx-apidoc -o ./rst/ ./scripts/
-  - sphinx-build -b html ./rst/ ./html/
-  - cp ./html/index.html ../.
+  - sphinx-apidoc -o ./sphinx-local/rst/ ./sphinx-local/scripts/
+  - sphinx-build -b html ./sphinx-local/rst/ ./sphinx-local/html/
+  - cp ./sphinx-local/html/index.html .
   - git config --global user.name "shrinilthakkar"
   - git config --global user.email "shrinil@moengage.com"
   - git add .
