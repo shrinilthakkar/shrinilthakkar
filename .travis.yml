@@ -12,8 +12,8 @@ install:
   - python -m pip install pylint
   - pylint --generate-rcfile > .pylintrc
   #- git diff --name-only
-  - a = `git diff D...H`
-  - git diff D...H
+  #- a = `git diff D...H`
+  - git diff `git branch`...master
   - pylint $a || true
 
 before_script:
