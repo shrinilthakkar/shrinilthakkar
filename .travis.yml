@@ -1,21 +1,12 @@
 branches:
   only:
     - master
-    
-stages:
-  - syntax_check
-  - test
-    if: type IN (push, pull_request)
-
-stages:
-  - name: doc_generator
-    if: type IN (push)
 
 language: python
 python:
   - "2.7"
 
-syntax_check:
+before_script:
   - python -m pip install pylint
   - pylint --generate-rcfile > .pylintrc
   - pylint *.py
@@ -26,16 +17,33 @@ test:
   - nosetests ./tests/ --with-coverage --cover-html --cover-tests
 
 doc_generator:
-  - pip install -U sphinx
-  - git branch -d gh-pages || true
-  - git push -d https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/ gh-pages || true
-  - git checkout -b gh-pages
-  - rm -rf ./sphinx-local/html/*
-  - sphinx-apidoc -o ./sphinx-local/rst/ ./sphinx-local/scripts/
-  - sphinx-build -b html ./sphinx-local/rst/ ./sphinx-local/html/
-  - cp -R ./sphinx-local/html/* .
-  - git config --global user.name "shrinilthakkar"
-  - git config --global user.email "shrinil@moengage.com"
-  - git add .
-  - git commit -am "adding html files" 
-  - git push -u https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/ gh-pages
+  - |
+    if [[ "$TRAVIS_PULL_REQUEST" = "false" ]]; then
+      pip install -U sphinx
+      git branch -d gh-pages || true
+      git push -d https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/ gh-pages || true
+      git checkout -b gh-pages
+      rm -rf ./sphinx-local/html/*
+      sphinx-apidoc -o ./sphinx-local/rst/ ./sphinx-local/scripts/
+      sphinx-build -b html ./sphinx-local/rst/ ./sphinx-local/html/
+      cp -R ./sphinx-local/html/* .
+      git config --global user.name "shrinilthakkar"
+      git config --global user.email "shrinil@moengage.com"
+      git add .
+      git commit -am "adding html files" 
+      git push -u https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/ gh-pages
+    fi
+
+#   - pip install -U sphinx
+#   - git branch -d gh-pages || true
+#   - git push -d https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/ gh-pages || true
+#   - git checkout -b gh-pages
+#   - rm -rf ./sphinx-local/html/*
+#   - sphinx-apidoc -o ./sphinx-local/rst/ ./sphinx-local/scripts/
+#   - sphinx-build -b html ./sphinx-local/rst/ ./sphinx-local/html/
+#   - cp -R ./sphinx-local/html/* .
+#   - git config --global user.name "shrinilthakkar"
+#   - git config --global user.email "shrinil@moengage.com"
+#   - git add .
+#   - git commit -am "adding html files" 
+#   - git push -u https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/ gh-pages
