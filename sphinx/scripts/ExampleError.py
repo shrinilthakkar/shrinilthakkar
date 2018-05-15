@@ -1,7 +1,7 @@
 class ExampleError(Exception):
     """Exceptions are documented in the same way as classes.
 
-    The __init__ method may be documented in either the class level
+    The __init__() method may be documented in either the class level
     docstring, or as a docstring on the __init__ method itself.
 
     Either form is acceptable, but the two should not be mixed. Choose one
