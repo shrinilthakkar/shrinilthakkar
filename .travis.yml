@@ -7,11 +7,11 @@ stages:
     if: type IN (push)
 
 stages:
-  - name: tests
+  - name: test
     if: type IN (push)
 
 stages:
-  - name: deploy
+  - name: doc_generator
     if: type IN (push)
 
 language: python
@@ -23,12 +23,12 @@ syntax_check:
   - pylint --generate-rcfile > .pylintrc
   - pylint *.py
 
-tests:
+test:
   - pip install nose
   - pip install coverage
   - nosetests ./tests/ --with-coverage --cover-html --cover-tests
 
-deploy:
+doc_generator:
   - pip install -U sphinx
   - git branch -d gh-pages || true
   - git push -d https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/ gh-pages || true
