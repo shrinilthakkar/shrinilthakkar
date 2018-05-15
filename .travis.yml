@@ -4,11 +4,11 @@ branches:
     
 stages:
   - name: syntax_check
-    if: type IN (push)
+    if: type IN (push, pull_request)
 
 stages:
   - name: test
-    if: type IN (push)
+    if: type IN (push, pull_request)
 
 stages:
   - name: doc_generator
