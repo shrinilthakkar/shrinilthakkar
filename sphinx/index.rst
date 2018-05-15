@@ -14,6 +14,7 @@ Welcome to Project1's documentation!
    rst/hello
    rst/modules
    rst/index
+   rst/ExampleError
 
 Indices and tables
 ==================
