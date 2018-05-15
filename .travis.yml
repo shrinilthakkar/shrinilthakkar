@@ -3,11 +3,8 @@ branches:
     - master
     
 stages:
-  - name: syntax_check
-    if: type IN (push, pull_request)
-
-stages:
-  - name: test
+  - syntax_check
+  - test
     if: type IN (push, pull_request)
 
 stages:
