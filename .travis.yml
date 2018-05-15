@@ -8,7 +8,7 @@ python:
 
 install:
   - pip install pylint_runner
-  - pylint_runner .
+  - pylint_runner -v . || true
 #   - python -m pip install pylint
 #   - pylint --generate-rcfile > .pylintrc
 #   - pylint .
