@@ -1,2 +1,2 @@
 """hellooo hiiii"""
-print "Hiii World"
+print "Hii World"
