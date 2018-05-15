@@ -11,7 +11,8 @@ install:
 #   - pylint_runner -v . || true
   - python -m pip install pylint
   - pylint --generate-rcfile > .pylintrc
-  - git diff --name-only
+  - git status
+  #- git diff --name-only
   #- echo $a
   #- pylint $a
 
