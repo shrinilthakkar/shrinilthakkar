@@ -7,9 +7,11 @@ python:
   - "2.7"
 
 install:
-  - python -m pip install pylint
-  - pylint --generate-rcfile > .pylintrc
-  - pylint .
+  - pip install pylint_runner
+  - pylint_runner .
+#   - python -m pip install pylint
+#   - pylint --generate-rcfile > .pylintrc
+#   - pylint .
 
 before_script:
   - pip install nose
