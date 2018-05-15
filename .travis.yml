@@ -15,6 +15,7 @@ install:
   - git branch
   - b=`git branch`
   - echo $b
+  - git diff --name-only origin/$b origin/master
   - a=`git diff --name-only origin/$b origin/master`
   - echo $a
   - pylint $a || true
