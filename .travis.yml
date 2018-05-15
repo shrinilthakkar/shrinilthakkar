@@ -6,17 +6,17 @@ language: python
 python:
   - "2.7"
 
-before_script:
+install:
   - python -m pip install pylint
   - pylint --generate-rcfile > .pylintrc
   - pylint *.py
 
-test:
+before_script:
   - pip install nose
   - pip install coverage
   - nosetests ./tests/ --with-coverage --cover-html --cover-tests
 
-doc_generator:
+script:
   - |
     if [[ "$TRAVIS_PULL_REQUEST" = "false" ]]; then
       pip install -U sphinx
