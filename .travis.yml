@@ -22,6 +22,7 @@ branches:
 
 script:
   - pip install -U sphinx
+  - git remote -v
   - git branch -D origin gh-pages || true
   - git push -D https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/ gh-pages || true
   - git checkout -b gh-pages
