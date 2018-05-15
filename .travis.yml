@@ -10,7 +10,7 @@ install:
 #   - pip install pylint_runner
 #   - pylint_runner -v . || true
   - python -m pip install pylint
-  # - pylint --generate-rcfile > .pylintrc
+  - pylint --generate-rcfile > .pylintrc
   # - a=`git diff --name-only`
   - pylint `git diff --name-only`
 
