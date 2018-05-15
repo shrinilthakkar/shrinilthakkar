@@ -10,6 +10,8 @@ Welcome to Project1's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   rst/conf
+   rst/hello
    rst/modules
    rst/index
 

@@ -14,10 +14,9 @@
 #
 import os
 import sys
-print "*************####"
-print sys.path
-sys.path.append('../shrinilthakkar/sphinx/scripts/')
-print sys.path
+current_path = os.getcwd()
+current_path = current_path + "/scripts"
+sys.path.append(current_path)
 
 
 # -- Project information -----------------------------------------------------
@@ -79,7 +78,7 @@ pygments_style = 'sphinx'
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
+html_theme = 'classic'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
