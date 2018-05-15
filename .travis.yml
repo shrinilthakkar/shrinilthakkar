@@ -11,9 +11,9 @@ install:
 #   - pylint_runner -v . || true
   - python -m pip install pylint
   - pylint --generate-rcfile > .pylintrc
-  - a=`git diff --name-only`
-  - echo $a
-  - pylint $a
+  - git diff --name-only
+  #- echo $a
+  #- pylint $a
 
 before_script:
   - pip install nose
