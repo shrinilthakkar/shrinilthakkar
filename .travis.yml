@@ -9,7 +9,7 @@ python:
 install:
   - python -m pip install pylint
   - pylint --generate-rcfile > .pylintrc
-  - pylint *.py
+  - pylint .
 
 before_script:
   - pip install nose
