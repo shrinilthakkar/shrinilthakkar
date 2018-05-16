@@ -1,18 +1,18 @@
-def func_____________1():
+def func_1():
     """
-    Random ----::::::::: func 1**************************************************************
+    This is the func 1 inside scripts folder.
     """
     print "print statement for hello"
 
-def func_____________2():
+def func_2():
     """
-    ##################. func2 inside hello.py
+    This is the func 2 inside scripts folder.
     """
     print "print statement for func2"
 
-def func_____________3():
+def func_3():
     """
-    $$$$$$$$$$$$$$$$$$$$$$$$$$ func3 is here
+    This is the func 3 inside scripts folder.
     """
     print "func3 in hello.py"
 
