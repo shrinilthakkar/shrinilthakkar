@@ -25,20 +25,34 @@ before_script:
   - pip install coverage
   - nosetests ./tests/ --with-coverage --cover-html --cover-tests
 
+#script:
+#   - |
+#     if [[ "$TRAVIS_PULL_REQUEST" = "false" ]]; then
+#       pip install -U sphinx
+#       git branch -d gh-pages || true
+#       git push -d https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/ gh-pages || true
+#       git checkout -b gh-pages
+#       rm -rf ./sphinx/html/*
+#       sphinx-apidoc -o ./sphinx/rst/ ./sphinx/scripts/
+#       sphinx-build -b html ./sphinx/rst/ ./sphinx/html/
+#       cp -R ./sphinx/html/* .
+#       git config --global user.name "shrinilthakkar"
+#       git config --global user.email "shrinil@moengage.com"
+#       git add .
+#       git commit -am "adding html files" 
+#       git push -u https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/ gh-pages
+#     fi
 script:
-  - |
-    if [[ "$TRAVIS_PULL_REQUEST" = "false" ]]; then
-      pip install -U sphinx
-      git branch -d gh-pages || true
-      git push -d https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/ gh-pages || true
-      git checkout -b gh-pages
-      rm -rf ./sphinx/html/*
-      sphinx-apidoc -o ./sphinx/rst/ ./sphinx/scripts/
-      sphinx-build -b html ./sphinx/rst/ ./sphinx/html/
-      cp -R ./sphinx/html/* .
-      git config --global user.name "shrinilthakkar"
-      git config --global user.email "shrinil@moengage.com"
-      git add .
-      git commit -am "adding html files" 
-      git push -u https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/ gh-pages
-    fi
+  - pip install -U sphinx
+  - git branch -d gh-pages || true
+  - git push -d https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/ gh-pages || true
+  - git checkout -b gh-pages
+  - rm -rf ./sphinx/html/*
+  - sphinx-apidoc -o ./sphinx/rst/ ./sphinx/scripts/
+  - sphinx-build -b html ./sphinx/rst/ ./sphinx/html/
+  - cp -R ./sphinx/html/* .
+  - git config --global user.name "shrinilthakkar"
+  - git config --global user.email "shrinil@moengage.com"
+  - git add .
+  - git commit -am "adding html files" 
+  - git push -u https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/ gh-pages
