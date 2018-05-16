@@ -25,7 +25,7 @@ before_script:
   - pip install coverage
   - nosetests ./tests/ --with-coverage --cover-html --cover-tests
 
-#script:
+script:
   - |
     if [[ "$TRAVIS_PULL_REQUEST" = "false" ]]; then
       pip install -U sphinx
