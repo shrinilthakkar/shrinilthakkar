@@ -11,8 +11,8 @@ Welcome to Project1's documentation!
    :caption: Contents:
 
    modules
-   ./../scripts/hello
-   ./../scripts/dir/hell
+   /home/travis/build/shrinilthakkar/shrinilthakkar/sphinx/scripts/hello
+   /home/travis/build/shrinilthakkar/shrinilthakkar/sphinx/scripts/dir/hell
 
 Indices and tables
 ==================
