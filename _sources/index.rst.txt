@@ -12,7 +12,6 @@ Welcome to Project1's documentation!
    :caption: Contents:
 
    modules
-   scrits/dir/hell
 
 Indices and tables
 ==================
