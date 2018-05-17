@@ -24,8 +24,10 @@ script:
       git stash
       git pull https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar gh-pages
       rm -rf ./sphinx/html/*
+      cd sphinx/rst/
       shopt -s extglob
       rm -v !(conf.py|index.rst)
+      cd ../..
       sphinx-apidoc -o sphinx/rst/ sphinx/scripts/
       sphinx-build -b html sphinx/rst/ sphinx/html/
       cp -R ./sphinx/html/* .
