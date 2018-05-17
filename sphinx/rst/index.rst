@@ -10,9 +10,7 @@ Welcome to Project1's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   modules
-   /home/travis/build/shrinilthakkar/shrinilthakkar/sphinx/scripts/hello
-   /home/travis/build/shrinilthakkar/shrinilthakkar/sphinx/scripts/dir/hell
+   
 
 Indices and tables
 ==================
