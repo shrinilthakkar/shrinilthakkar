@@ -30,6 +30,7 @@ script:
       git commit -am "adding html files" 
       git push -u https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/ gh-pages
     fi
+    
 # script:
 #   - pip install -U sphinx
 #   - git branch -d gh-pages || true
