@@ -6,8 +6,7 @@
 Welcome to Project1's documentation!
 ====================================
 
-. autosummary::
-  :toctree: _autosummary
+.. toctree::
    :maxdepth: 2
    :caption: Contents:
 
