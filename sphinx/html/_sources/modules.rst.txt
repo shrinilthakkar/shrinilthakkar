@@ -4,5 +4,5 @@ scripts
 .. toctree::
    :maxdepth: 4
 
-   hello
    ExampleError
+   hello
