@@ -34,7 +34,7 @@ script:
       git push -u https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/ gh-pages
     fi
     
-## script:
+# script:
 #   - pip install -U sphinx
 #   - git branch -d gh-pages || true
 #   - git push -d https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/ gh-pages || true
