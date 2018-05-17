@@ -24,7 +24,8 @@ script:
       git stash
       git pull https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar gh-pages
       rm -rf ./sphinx/html/*
-      sphinx-apidoc -o sphinx/rst/ sphinx/scripts/
+      sphinx-apidoc -o sphinx/rst/ sphinx/scripts/*
+      #sphinx-apidoc -o sphinx/rst/ sphinx/scripts/dir/
       sphinx-build -b html sphinx/rst/ sphinx/html/
       cp -R ./sphinx/html/* .
       git config --global user.name "shrinilthakkar"
