@@ -9,16 +9,6 @@ python:
 install:
   - pip install pylint_runner
   - pylint_runner -v . || true
-#   - python -m pip install pylint
-#   - pylint --generate-rcfile > .pylintrc
-#   #- git diff --name-only
-#   - git branch
-#   - b=`git branch`
-#   - echo $b
-#   - git diff --name-only origin/$b origin/master
-#   - a=`git diff --name-only origin/$b origin/master`
-#   - echo $a
-#   - pylint $a || true
 
 before_script:
   - pip install nose
@@ -32,6 +22,7 @@ script:
       git branch -d gh-pages || true
       git push -d https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/ gh-pages || true
       git checkout -b gh-pages
+      #git pull https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar gh-pages
       rm -rf ./sphinx/html/*
       sphinx-apidoc -o sphinx/rst/ sphinx/scripts/
       sphinx-build -b html sphinx/rst/ sphinx/html/
@@ -42,6 +33,7 @@ script:
       git commit -am "adding html files" 
       git push -u https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/ gh-pages
     fi
+    
 # script:
 #   - pip install -U sphinx
 #   - git branch -d gh-pages || true
