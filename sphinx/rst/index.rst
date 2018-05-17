@@ -11,8 +11,8 @@ Welcome to Project1's documentation!
    :caption: Contents:
 
    modules
-   ../scripts/hello
-   ../scripts/dir/hell
+   ./../scripts/hello
+   ./../scripts/dir/hell
 
 Indices and tables
 ==================
