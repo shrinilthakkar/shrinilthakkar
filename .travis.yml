@@ -20,6 +20,7 @@ script:
     if [[ "$TRAVIS_PULL_REQUEST" = "false" ]]; then
       pip install -U sphinx
       git checkout -b gh-pages
+      git pull https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar gh-pages
       rm -rf ./sphinx/html/*
       sphinx-apidoc -o sphinx/rst/ sphinx/scripts/
       sphinx-build -b html sphinx/rst/ sphinx/html/
