@@ -19,10 +19,10 @@ script:
   - |
     if [[ "$TRAVIS_PULL_REQUEST" = "false" ]]; then
       pip install -U sphinx
-      git branch -d gh-pages || true
-      git push -d https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar.git/ gh-pages || true
       git checkout -b gh-pages
-      #git pull https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar gh-pages
+      git clean -d -f
+      git stash
+      git pull https://shrinilthakkar:$key@github.com/shrinilthakkar/shrinilthakkar gh-pages
       rm -rf ./sphinx/html/*
       sphinx-apidoc -o sphinx/rst/ sphinx/scripts/
       sphinx-build -b html sphinx/rst/ sphinx/html/
